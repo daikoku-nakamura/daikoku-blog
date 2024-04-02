@@ -1,3 +1,3 @@
 export default function Home() {
-  return <main>ゼロから始めるdaikoku blog.</main>;
+  return <main className="text-red-500 font-bold">ゼロから始めるdaikoku blog.</main>;
 }

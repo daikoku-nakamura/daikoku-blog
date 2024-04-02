@@ -37,14 +37,23 @@
   "linter": {
     "enabled": true,
     "rules": {
-      "recommended": true,
-      "correctness": {
-        "noUndeclaredVariables": "error",
-        "noUnusedVariables": "error",
-        "useHookAtTopLevel": "error",
-        "nursery": {
-          "noUnusedImports": "error"
+      "a11y": {
+        "noAccessKey": "error",
+        "noAriaUnsupportedElements": "warn",
+        "noAutofocus": "off",
+        "noBlankTarget": {
+          "level": "error",
+          "options": {
+            "strictCase": false,
+            "enumMemberCase": "CONSTANT_CASE"
+          }
         }
+      },
+      "complexity": {
+        "recommended": true
+      },
+      "performance": {
+        "all": true
       }
     }
   },

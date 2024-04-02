@@ -1,19 +1,35 @@
 import { pageLinks } from '@/const/pageLinks';
+import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Header() {
   return (
-    <div className='flex justify-between'>
-      <Link href='/'>ホーム</Link>
-      <nav>
-        <ul className='flex justify-between gap-4'>
+    <header className='p-4 bg-[#3D3D3D] text-white'>
+      <div className='container flex justify-between h-20 mx-auto'>
+        <Link
+          href='/'
+          aria-label='大黒工業ブログのホームへ'
+          className='flex items-center p-2'
+        >
+          <Image
+            src='/images/daikoku-logo.webp'
+            width={280}
+            height={70}
+            alt='大黒工業ロゴ'
+            className='hover:opacity-80'
+          />
+        </Link>
+        <ul className='items-stretch hidden space-x-3 lg:flex'>
           {pageLinks.map(link => (
-            <li key={link.title}>
+            <li key={link.title} className='flex items-center px-4 hover:underline'>
               <Link href={link.path}>{link.title}</Link>
             </li>
           ))}
         </ul>
-      </nav>
-    </div>
+        <button type='button' className='p-4 lg:hidden'>
+          メニュー
+        </button>
+      </div>
+    </header>
   );
 }

@@ -1,5 +1,3 @@
 export default function Contact() {
-  return (
-    <div>お問い合わせページ</div>
-  )
+  return <div>お問い合わせページ</div>;
 }

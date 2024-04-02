@@ -42,11 +42,7 @@
         "noAriaUnsupportedElements": "warn",
         "noAutofocus": "off",
         "noBlankTarget": {
-          "level": "error",
-          "options": {
-            "strictCase": false,
-            "enumMemberCase": "CONSTANT_CASE"
-          }
+          "level": "error"
         }
       },
       "complexity": {

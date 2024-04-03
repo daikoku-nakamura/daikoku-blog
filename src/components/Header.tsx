@@ -22,8 +22,10 @@ export default function Header() {
         </Link>
         <ul className='items-stretch hidden space-x-3 lg:flex'>
           {pageLinks.map(link => (
-            <li key={link.title} className='flex items-center px-4 hover:underline'>
-              <Link href={link.path}>{link.title}</Link>
+            <li key={link.title} className='flex items-center px-4'>
+              <Link href={link.path} className='hover:scale-110 hover:underline'>
+                {link.title}
+              </Link>
             </li>
           ))}
         </ul>

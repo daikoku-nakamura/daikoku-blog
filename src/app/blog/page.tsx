@@ -1,3 +1,9 @@
+import Breadcrumb from '@/components/Breadcrumb';
+
 export default function Blogs() {
-  return <div>ブログ一覧ページ</div>;
+  return (
+    <div>
+      <Breadcrumb lists={[{ name: 'ブログ一覧' }]} />
+    </div>
+  );
 }

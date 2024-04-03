@@ -1,3 +1,9 @@
+import Breadcrumb from '@/components/Breadcrumb';
+
 export default function Privacy() {
-  return <div>プライバシーポリシーページ</div>;
+  return (
+    <div>
+      <Breadcrumb lists={[{ name: 'プライバシーポリシー' }]} />
+    </div>
+  );
 }

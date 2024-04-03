@@ -1,6 +1,7 @@
 import { pageLinks } from '@/const/pageLinks';
 import Image from 'next/image';
 import Link from 'next/link';
+import MobileNav from './MobileNav';
 
 export default function Header() {
   return (
@@ -26,9 +27,7 @@ export default function Header() {
             </li>
           ))}
         </ul>
-        <button type='button' className='p-4 lg:hidden'>
-          メニュー
-        </button>
+        <MobileNav />
       </div>
     </header>
   );

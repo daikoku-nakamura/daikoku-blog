@@ -1,3 +1,4 @@
+import Fotter from '@/components/Fotter';
 import Header from '@/components/Header';
 import type { Metadata } from 'next';
 import './globals.css';
@@ -17,6 +18,7 @@ export default function RootLayout({
       <body>
         <Header />
         {children}
+        <Fotter />
       </body>
     </html>
   );

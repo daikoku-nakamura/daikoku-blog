@@ -6,6 +6,14 @@ import './globals.css';
 export const metadata: Metadata = {
   title: 'Daikoku Blog.',
   description: 'This is Daikoku Blog.',
+  robots: {
+    index: false,
+    follow: false,
+    googleBot: {
+      index: false,
+      follow: false,
+    },
+  },
 };
 
 export default function RootLayout({

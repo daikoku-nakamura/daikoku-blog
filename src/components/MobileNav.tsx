@@ -33,17 +33,17 @@ export default function MobileNav() {
           navShow ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
-        <div className='flex justify-end text-gray-800'>
+        <div className='flex justify-end'>
           <button type='button' className='mr-8 mt-11' onClick={onToggleNav}>
             <AiOutlineClose className='h-8 w-8' />
           </button>
         </div>
-        <nav className='fixed mt-8 h-full text-gray-800'>
+        <nav className='fixed mt-8 h-full'>
           {pageLinks.map(link => (
             <div key={link.title} className='px-12 py-6'>
               <Link
                 href={link.path}
-                className='text-2xl font-bold tracking-widest hover:underline'
+                className='text-2xl tracking-widest hover:underline'
                 onClick={onToggleNav}
               >
                 {link.title}

@@ -15,7 +15,7 @@ export default function Hero() {
         />
       </div>
       <div className='flex flex-col justify-center text-center mt-8 md:mt-0 md:max-w-md xl:max-w-lg md:text-left'>
-        <h1 className='text-5xl md:text-4xl font-bold leading-none lg:text-6xl'>
+        <h1 className='text-5xl md:text-4xl leading-none lg:text-6xl'>
           大黒工業の
           <br />
           <span className='text-green-600'>営業マンによる</span>

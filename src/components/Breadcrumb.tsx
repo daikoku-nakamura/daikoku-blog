@@ -10,7 +10,7 @@ type Props = {
 
 export default function Breadcrumb({ lists }: Props) {
   return (
-    <nav aria-label='breadcrumb' className='w-full p-4 bg-gray-100'>
+    <nav aria-label='breadcrumb' className='w-full p-4 bg-white'>
       <ol className='flex h-8 space-x-2'>
         <li className='flex items-center'>
           <Link href='/' title='ホームに戻る' className='hover:underline'>

@@ -6,8 +6,10 @@ type Props = {
 export default function SectionHeader({ subHeading, title }: Props) {
   return (
     <div className='text-center py-6'>
-      <p className='text-lg text-green-600 uppercase'>{subHeading}</p>
-      <h2 className='text-4xl sm:text-5xl'>{title}</h2>
+      <p className='text-lg text-green-600 uppercase mb-2'>{subHeading}</p>
+      <h2 className='text-4xl sm:text-5xl underline decoration-green-500 decoration-8 underline-offset-8'>
+        {title}
+      </h2>
     </div>
   );
 }

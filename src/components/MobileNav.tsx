@@ -26,10 +26,10 @@ export default function MobileNav() {
         className='lg:hidden'
         onClick={onToggleNav}
       >
-        <AiOutlineMenu className='h-6 w-6' />
+        <AiOutlineMenu className='h-8 w-8' />
       </button>
       <div
-        className={`fixed left-0 top-0 z-10 h-full w-full transform bg-white opacity-95 duration-300 ease-in-out ${
+        className={`fixed left-0 top-0 z-10 h-full w-full transform bg-white text-gray-800 opacity-95 duration-300 ease-in-out ${
           navShow ? 'translate-x-0' : 'translate-x-full'
         }`}
       >

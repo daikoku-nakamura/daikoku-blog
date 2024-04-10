@@ -18,7 +18,7 @@ export function OutlineButton({ type, children }: Props) {
   return (
     <button
       type={type}
-      className='px-8 py-3 border rounded border-green-500 text-green-500 hover:bg-green-600 hover:text-white'
+      className='px-8 py-3 border rounded bg-white border-green-500 text-green-500 hover:bg-green-600 hover:text-white'
     >
       {children}
     </button>

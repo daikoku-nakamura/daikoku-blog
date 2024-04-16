@@ -3,7 +3,7 @@ export const companyData = [
     department: {
       id: 1000,
       name: '本社',
-      meisai: [
+      items: [
         {
           id: 100,
           name: '本社',
@@ -35,7 +35,7 @@ export const companyData = [
     department: {
       id: 2000,
       name: '仙台営業部',
-      meisai: [
+      items: [
         {
           id: 1100,
           name: '札幌営業所',
@@ -61,7 +61,7 @@ export const companyData = [
     department: {
       id: 3000,
       name: '東京営業部',
-      meisai: [
+      items: [
         {
           id: 3200,
           name: '東京営業所',
@@ -93,7 +93,7 @@ export const companyData = [
     department: {
       id: 8000,
       name: 'マーケティング事業部',
-      meisai: [
+      items: [
         {
           id: 8100,
           name: '東京マーケティング事業部',
@@ -107,7 +107,7 @@ export const companyData = [
     department: {
       id: 5000,
       name: '大阪営業部',
-      meisai: [
+      items: [
         {
           id: 5100,
           name: '大阪営業所',
@@ -127,7 +127,7 @@ export const companyData = [
     department: {
       id: 6000,
       name: '本店営業部',
-      meisai: [
+      items: [
         {
           id: 6100,
           name: '中四国営業所',
@@ -141,7 +141,7 @@ export const companyData = [
     department: {
       id: 7000,
       name: '福岡営業部',
-      meisai: [
+      items: [
         {
           id: 7100,
           name: '福岡営業所',
@@ -161,7 +161,7 @@ export const companyData = [
     department: {
       id: 20000,
       name: '国内工場・配送センター',
-      meisai: [
+      items: [
         {
           id: 20001,
           name: '大黒美術紙工（株）美唄配送センター',

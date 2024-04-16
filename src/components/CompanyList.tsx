@@ -18,12 +18,12 @@ export default function CompanyList() {
                   <th className='w-1/4 px-1 py-3 md:px-6'>電話番号</th>
                 </tr>
               </thead>
-              {company.department.meisai.map(dep => (
-                <tbody key={dep.id}>
+              {company.department.items.map(item => (
+                <tbody key={item.id}>
                   <tr className='border-b hover:bg-white'>
-                    <td className='px-1 py-4 md:px-6'>{dep.name}</td>
-                    <td className='px-1 py-4 md:px-6'>{dep.address}</td>
-                    <td className='px-1 py-4 md:px-6'>{dep.tel}</td>
+                    <td className='px-1 py-4 md:px-6'>{item.name}</td>
+                    <td className='px-1 py-4 md:px-6'>{item.address}</td>
+                    <td className='px-1 py-4 md:px-6'>{item.tel}</td>
                   </tr>
                 </tbody>
               ))}

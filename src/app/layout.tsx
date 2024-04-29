@@ -26,8 +26,10 @@ export default function RootLayout({
     <html lang='ja'>
       <body>
         <Header />
-        {children}
-        <ReturnToTop />
+        <main>
+          {children}
+          <ReturnToTop />
+        </main>
         <Fotter />
       </body>
     </html>

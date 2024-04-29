@@ -1,4 +1,5 @@
 import Breadcrumb from '@/components/Breadcrumb';
+import CalltoAction from '@/components/CalltoAction';
 import Container from '@/components/Container';
 import FormatDate from '@/components/FormatDate';
 import SectionHeader from '@/components/SectionHeader';
@@ -34,6 +35,7 @@ export default async function BlogId({ params }: Props) {
           className='prose py-6 lg:prose-lg'
         />
       </Container>
+      <CalltoAction />
     </>
   );
 }

@@ -43,7 +43,7 @@ export default function BlogCard({ blogs }: Props) {
                   {blog.categories.map(category => (
                     <span
                       key={category.id}
-                      className='inline-flex items-center gap-1 rounded-full bg-green-50 px-2 py-1 text-sm text-green-600'
+                      className='inline-flex items-center gap-1 rounded-full bg-green-100 px-2 py-1 text-sm text-green-600'
                     >
                       {category.name}
                     </span>

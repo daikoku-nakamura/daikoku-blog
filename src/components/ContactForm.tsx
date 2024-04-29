@@ -1,6 +1,7 @@
 'use client';
 import { BaseButton } from '@/components/Button';
 import Container from '@/components/Container';
+import { useRouter } from 'next/navigation';
 import { useForm } from 'react-hook-form';
 
 type FormValues = {
@@ -13,6 +14,7 @@ type FormValues = {
 };
 
 export default function ContactForm() {
+  const router = useRouter();
   const {
     register,
     handleSubmit,
@@ -26,13 +28,22 @@ export default function ContactForm() {
       formData.append(key, value);
     });
 
-    await fetch(process.env.NEXT_PUBLIC_NEWT_FORM_ENDPOINT ?? '', {
-      method: 'POST',
-      body: formData,
-      headers: {
-        Accept: 'application/json',
-      },
-    });
+    try {
+      const response = await fetch(process.env.NEXT_PUBLIC_NEWT_FORM_ENDPOINT ?? '', {
+        method: 'POST',
+        body: formData,
+        headers: {
+          Accept: 'application/json',
+        },
+      });
+      if (response.ok) {
+        router.push('/contact/thanks');
+      } else {
+        router.push('/contact/error');
+      }
+    } catch (error) {
+      router.push('/contact/error');
+    }
   });
 
   return (

@@ -24,7 +24,7 @@ export default function FormInput({
     <div className='mb-4'>
       <label htmlFor={id} className='inline-block sm:text-base'>
         {label}
-        {required && <span className='ml-2 text-blue-500'>*</span>}
+        {required && <span className='ml-2 text-red-500'>*</span>}
       </label>
       {rows ? (
         <textarea

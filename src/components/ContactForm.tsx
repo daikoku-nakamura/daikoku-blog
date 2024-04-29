@@ -47,6 +47,7 @@ export default function ContactForm() {
   return (
     <Container>
       <FormProvider {...methods}>
+        <p className='text-red-500 py-4'>全ての項目が入力必須となっています。</p>
         <form onSubmit={onSubmit}>
           <FormInput id='name' label='氏名' />
           <FormInput id='email' label='メールアドレス' type='email' />

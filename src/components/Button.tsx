@@ -16,11 +16,12 @@ export function BaseButton({ type, children, onClick }: Props) {
   );
 }
 
-export function OutlineButton({ type, children }: Props) {
+export function OutlineButton({ type, children, onClick }: Props) {
   return (
     <button
       type={type}
       className='px-8 py-3 border rounded bg-white border-green-500 text-green-500 hover:bg-green-600 hover:text-white'
+      onClick={onClick}
     >
       {children}
     </button>

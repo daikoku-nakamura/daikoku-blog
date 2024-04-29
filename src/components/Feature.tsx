@@ -30,7 +30,7 @@ export default function Feature() {
                   </div>
                   <div className='ml-4'>
                     <h4 className='text-lg leading-6'>{content.title}</h4>
-                    <p className='mt-2 text-gray-600'>{content.content}</p>
+                    <p className='mt-2 text-gray-500'>{content.content}</p>
                   </div>
                 </div>
               ))}
@@ -63,7 +63,7 @@ export default function Feature() {
                     </div>
                     <div className='ml-4'>
                       <h4 className='text-lg leading-6'>{content.title}</h4>
-                      <p className='mt-2 text-gray-600'>{content.content}</p>
+                      <p className='mt-2 text-gray-500'>{content.content}</p>
                     </div>
                   </div>
                 ))}

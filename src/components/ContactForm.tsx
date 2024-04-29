@@ -1,74 +1,62 @@
+'use client';
 import { BaseButton } from '@/components/Button';
 import Container from '@/components/Container';
+import FormInput from '@/components/FormInput';
+import { useRouter } from 'next/navigation';
+import { FormProvider, useForm } from 'react-hook-form';
+
+type FormValues = {
+  name: string;
+  email: string;
+  company: string;
+  address: string;
+  tel: string;
+  message: string;
+};
 
 export default function ContactForm() {
+  const router = useRouter();
+  const methods = useForm<FormValues>({ mode: 'onChange' });
+  const { handleSubmit } = methods;
+
+  const onSubmit = handleSubmit(async data => {
+    const formData = new FormData();
+    // biome-ignore lint/complexity/noForEach: <explanation>
+    Object.entries(data).forEach(([key, value]) => {
+      formData.append(key, value);
+    });
+
+    try {
+      const response = await fetch(process.env.NEXT_PUBLIC_NEWT_FORM_ENDPOINT ?? '', {
+        method: 'POST',
+        body: formData,
+        headers: {
+          Accept: 'application/json',
+        },
+      });
+      if (response.ok) {
+        router.push('/contact/thanks');
+      } else {
+        router.push('/contact/error');
+      }
+    } catch (error) {
+      router.push('/contact/error');
+    }
+  });
+
   return (
     <Container>
-      <form className='mx-auto max-w-screen-md'>
-        <div className='mb-4'>
-          <label htmlFor='name' className='inline-block sm:text-base'>
-            氏名<span className='ml-1 text-red-500'>*</span>
-          </label>
-          <input
-            type='text'
-            id='name'
-            className='w-full rounded border px-3 py-2 outline-none ring-green-300 transition duration-100 focus:ring'
-          />
-        </div>
-        <div className='mb-4'>
-          <label htmlFor='email' className='inline-block sm:text-base'>
-            メールアドレス<span className='ml-1 text-red-500'>*</span>
-          </label>
-          <input
-            type='email'
-            id='email'
-            className='w-full rounded border px-3 py-2 outline-none ring-green-300 transition duration-100 focus:ring'
-          />
-        </div>
-        <div className='mb-4'>
-          <label htmlFor='company' className='inline-block sm:text-base'>
-            会社名<span className='ml-1 text-red-500'>*</span>
-          </label>
-          <input
-            type='text'
-            id='company'
-            className='w-full rounded border px-3 py-2 outline-none ring-green-300 transition duration-100 focus:ring'
-          />
-        </div>
-        <div className='mb-4'>
-          <label htmlFor='address' className='inline-block sm:text-base'>
-            住所<span className='ml-1 text-red-500'>*</span>
-          </label>
-          <input
-            type='text'
-            id='address'
-            className='w-full rounded border px-3 py-2 outline-none ring-green-300 transition duration-100 focus:ring'
-          />
-        </div>
-        <div className='mb-4'>
-          <label htmlFor='tel' className='inline-block sm:text-base'>
-            電話番号<span className='ml-1 text-red-500'>*</span>
-          </label>
-          <input
-            type='text'
-            id='tel'
-            className='w-full rounded border px-3 py-2 outline-none ring-green-300 transition duration-100 focus:ring'
-          />
-        </div>
-        <div className='mb-4'>
-          <label htmlFor='message' className='inline-block sm:text-base'>
-            メッセージ<span className='ml-1 text-red-500'>*</span>
-          </label>
-          <textarea
-            id='message'
-            rows={5}
-            className='h-64 w-full rounded border px-3 py-2 outline-none ring-green-300 transition duration-100 focus:ring'
-          />
-        </div>
-        <div>
+      <FormProvider {...methods}>
+        <form onSubmit={onSubmit}>
+          <FormInput id='name' label='氏名' />
+          <FormInput id='email' label='メールアドレス' type='email' />
+          <FormInput id='company' label='会社名' />
+          <FormInput id='address' label='住所' />
+          <FormInput id='tel' label='電話番号' />
+          <FormInput id='message' label='メッセージ' rows={5} />
           <BaseButton type='submit'>送信する</BaseButton>
-        </div>
-      </form>
+        </form>
+      </FormProvider>
     </Container>
   );
 }

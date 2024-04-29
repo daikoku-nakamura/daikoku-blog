@@ -1,13 +1,15 @@
 type Props = {
   type: 'button' | 'submit';
   children: React.ReactNode;
+  onClick?: () => void;
 };
 
-export function BaseButton({ type, children }: Props) {
+export function BaseButton({ type, children, onClick }: Props) {
   return (
     <button
       type={type}
       className='px-8 py-3 rounded bg-green-500 text-white hover:bg-green-600'
+      onClick={onClick}
     >
       {children}
     </button>

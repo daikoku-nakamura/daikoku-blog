@@ -1,6 +1,13 @@
 import { BaseButton } from '@/components/Button';
 import Container from '@/components/Container';
+import type { Metadata } from 'next';
 import Link from 'next/link';
+
+export const metadata: Metadata = {
+  title: '404エラー',
+  description:
+    '404エラー ページが見つかりませんでした || 大黒工業株式会社の営業が商品紹介などを掲載する情報ブログサイトです',
+};
 
 export default function NotFound() {
   return (

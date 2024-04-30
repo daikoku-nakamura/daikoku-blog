@@ -5,8 +5,29 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Daikoku Blog.',
-  description: 'This is Daikoku Blog.',
+  metadataBase: new URL(process.env.BASE_URL as string),
+  title: {
+    template: '%s | 大黒工業 営業ブログ',
+    default: '大黒工業 営業ブログ',
+  },
+  description:
+    '大黒工業株式会社の営業マンが商品情報やお知らせを配信する情報ブログサイトです',
+  openGraph: {
+    title: {
+      template: '%s | 大黒工業 営業ブログ',
+      default: '大黒工業 営業ブログ',
+    },
+    description:
+      '大黒工業株式会社の営業マンが商品情報やお知らせを配信する情報ブログサイトです',
+    type: 'website',
+    images: '/images/moldimage1280x650.jpg',
+  },
+  twitter: {
+    card: 'summary_large_image',
+  },
+  alternates: {
+    canonical: '/',
+  },
   robots: {
     index: false,
     follow: false,

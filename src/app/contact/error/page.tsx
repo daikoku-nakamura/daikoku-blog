@@ -3,8 +3,15 @@ import Breadcrumb from '@/components/Breadcrumb';
 import { BaseButton, OutlineButton } from '@/components/Button';
 import Container from '@/components/Container';
 import SectionHeader from '@/components/SectionHeader';
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
+
+export const metadata: Metadata = {
+  title: '送信エラー',
+  description:
+    'お問合せ送信エラー || 大黒工業株式会社の営業が商品紹介などを掲載する情報ブログサイトです',
+};
 
 export default function ContactError() {
   const router = useRouter();

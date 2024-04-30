@@ -1,6 +1,13 @@
 import Breadcrumb from '@/components/Breadcrumb';
 import CalltoAction from '@/components/CalltoAction';
 import SectionHeader from '@/components/SectionHeader';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'プライバシーポリシー',
+  description:
+    'プライバシーポリシーページ || 大黒工業株式会社の営業が商品紹介などを掲載する情報ブログサイトです',
+};
 
 export default function Privacy() {
   return (

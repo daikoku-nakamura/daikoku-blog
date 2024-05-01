@@ -9,73 +9,73 @@ export default function Gallery() {
         <SectionHeader subHeading='products' title='大黒工業株式会社の取り扱い製品' />
         <div className='grid grid-cols-2 gap-4 md:grid-cols-4 mt-6'>
           <Image
-            src='/images/Dlogo.jpg'
+            src='/productImage/01ナプキン.webp'
             width={300}
             height={300}
-            alt=''
+            alt='紙ナプキン'
             className='w-full h-full col-span-2 row-span-2 rounded shadow-sm min-h-96 md:col-start-3 md:row-start-1 aspect-square'
           />
           <Image
-            src='/images/Dlogo.jpg'
+            src='/productImage/03箸袋.webp'
             width={200}
             height={200}
-            alt=''
+            alt='箸袋'
             className='w-full h-full rounded shadow-sm min-h-48 aspect-square'
           />
           <Image
-            src='/images/Dlogo.jpg'
+            src='/productImage/04コースター.webp'
             width={200}
             height={200}
-            alt=''
+            alt='コースター'
             className='w-full h-full rounded shadow-sm min-h-48 aspect-square'
           />
           <Image
-            src='/images/Dlogo.jpg'
+            src='/productImage/29キッチンペーパー.webp'
             width={200}
             height={200}
-            alt=''
+            alt='キッチンペーパー'
             className='w-full h-full rounded shadow-sm min-h-48 aspect-square'
           />
           <Image
-            src='/images/Dlogo.jpg'
+            src='/productImage/32マスク.webp'
             width={200}
             height={200}
-            alt=''
+            alt='マスク'
             className='w-full h-full rounded shadow-sm min-h-48 aspect-square'
           />
           <Image
-            src='/images/Dlogo.jpg'
+            src='/productImage/12保冷剤.webp'
             width={200}
             height={200}
-            alt=''
+            alt='保冷剤'
             className='w-full h-full rounded shadow-sm min-h-48 aspect-square'
           />
           <Image
-            src='/images/Dlogo.jpg'
+            src='/productImage/16プラスチックスプーン.webp'
             width={200}
             height={200}
-            alt=''
+            alt='スプーン・フォーク'
             className='w-full h-full rounded shadow-sm min-h-48 aspect-square'
           />
           <Image
-            src='/images/Dlogo.jpg'
+            src='/productImage/19パルプモールド.webp'
             width={200}
             height={200}
-            alt=''
+            alt='パルプモールド'
             className='w-full h-full rounded shadow-sm min-h-48 aspect-square'
           />
           <Image
-            src='/images/Dlogo.jpg'
+            src='/productImage/36フルーツキャップ.webp'
             width={200}
             height={200}
-            alt=''
+            alt='フルーツキャップ'
             className='w-full h-full rounded shadow-sm min-h-48 aspect-square'
           />
           <Image
-            src='/images/Dlogo.jpg'
+            src='/productImage/02おしぼり.webp'
             width={300}
             height={300}
-            alt=''
+            alt='紙おしぼり'
             className='w-full h-full col-span-2 row-span-2 rounded shadow-sm min-h-96 md:col-start-1 md:row-start-3 aspect-square'
           />
         </div>

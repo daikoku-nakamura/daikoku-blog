@@ -4,10 +4,10 @@ import Link from 'next/link';
 
 export default function Hero() {
   return (
-    <section className='container flex flex-col justify-center mx-auto sm:py-12 md:py-24 md:flex-row md:justify-around'>
+    <section className='flex flex-col justify-center sm:py-12 md:py-24 md:flex-row md:justify-around bg-white'>
       <div className='flex items-center justify-center mt-8 md:mt-0 h-72 sm:h-80 lg:h-96'>
         <Image
-          src='/images/Dlogo.jpg'
+          src='/images/hero-image.webp'
           width={500}
           height={500}
           alt='大黒工業トップイメージ'
@@ -27,13 +27,13 @@ export default function Hero() {
           <br />
           営業マンによる情報発信サイトです
         </p>
-        <div className='flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start'>
-          <BaseButton type='button'>
-            <Link href='/blog'>ブログ</Link>
-          </BaseButton>
-          <OutlineButton type='button'>
-            <Link href='/contact'>お問い合わせ</Link>
-          </OutlineButton>
+        <div className='flex items-center justify-center space-x-4'>
+          <Link href='/blog'>
+            <BaseButton type='button'>ブログ</BaseButton>
+          </Link>
+          <Link href='/contact'>
+            <OutlineButton type='button'>お問い合わせ</OutlineButton>
+          </Link>
         </div>
       </div>
     </section>

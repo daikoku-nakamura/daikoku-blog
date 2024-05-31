@@ -1,7 +1,7 @@
+import BlogImage from '@/components/BlogImage';
 import Container from '@/components/Container';
 import FormatDate from '@/components/FormatDate';
 import type { Blog } from '@/libs/microcms';
-import Image from 'next/image';
 import Link from 'next/link';
 
 type Props = {
@@ -22,12 +22,10 @@ export default function BlogCard({ blogs }: Props) {
               className='bg-white border border-gray-200 rounded-lg shadow w-full'
             >
               <Link href={`/blog/${blog.id}`}>
-                <Image
-                  src={blog.eyecatch.url}
-                  width={384}
-                  height={216}
+                <BlogImage
+                  imageUrl={blog.eyecatch.url}
                   className='w-full object-cover rounded-t-lg'
-                  alt={blog.title}
+                  title={blog.title}
                 />
               </Link>
               <div className='p-4'>
@@ -35,9 +33,6 @@ export default function BlogCard({ blogs }: Props) {
                   投稿日：
                   <FormatDate date={blog.publishedAt} />
                 </p>
-                <Link href={`/blog/${blog.id}`}>
-                  <span className='text-xl hover:underline'>{blog.title}</span>
-                </Link>
                 <p className='mt-2 text-gray-500'>{blog.description}</p>
                 <div className='mt-4 flex gap-2'>
                   {blog.categories.map(category => (

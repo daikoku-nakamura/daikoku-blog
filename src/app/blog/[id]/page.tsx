@@ -1,3 +1,4 @@
+import BlogImage from '@/components/BlogImage';
 import Breadcrumb from '@/components/Breadcrumb';
 import CalltoAction from '@/components/CalltoAction';
 import Container from '@/components/Container';
@@ -35,7 +36,12 @@ export default async function BlogId({ params }: Props) {
       <SectionHeader subHeading='blog' title={data.title} />
       <Container>
         <div className='my-3 flex justify-center'>
-          <Image src={data.eyecatch.url} width={1280} height={720} alt={data.title} />
+          <BlogImage
+            imageUrl={data.eyecatch.url}
+            width={1280}
+            height={720}
+            title={data.title}
+          />
         </div>
         <div className='flex items-center justify-end py-3'>
           <AiOutlineClockCircle className='h-8 w-8' aria-hidden='true' />

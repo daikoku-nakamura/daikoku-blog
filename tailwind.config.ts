@@ -17,7 +17,10 @@ const config: Config = {
             },
             h3: {
               borderLeft: "8px solid theme('colors.green.600')",
-              padding: theme('spaciing.8'),
+              padding: theme('spacing.4'),
+            },
+            p: {
+              color: theme('colors.gray.600'),
             },
           },
         },

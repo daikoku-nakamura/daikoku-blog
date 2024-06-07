@@ -19,7 +19,7 @@ export default function CalltoAction() {
             </div>
             <div className='flex justify-center items-center'>
               <Link href='/contact'>
-                <BaseButton type='button'>お問い合わせはこちらから</BaseButton>
+                <BaseButton type='button'>お問い合わせ</BaseButton>
               </Link>
             </div>
           </div>

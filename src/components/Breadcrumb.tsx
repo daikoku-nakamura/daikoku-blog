@@ -13,7 +13,7 @@ export default function Breadcrumb({ lists }: Props) {
   return (
     <div className='bg-white'>
       <Container>
-        <nav aria-label='breadcrumb'>
+        <nav aria-label='パンくずリスト'>
           <ol className='flex h-8 space-x-2'>
             <li className='flex items-center'>
               <Link href='/' title='ホームに戻る' className='hover:underline'>

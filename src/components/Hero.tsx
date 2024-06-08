@@ -12,6 +12,7 @@ export default function Hero() {
           height={500}
           alt='大黒工業トップイメージ'
           className='object-contain h-72 sm:h-80 lg:h-96'
+          priority
         />
       </div>
       <div className='flex flex-col justify-center text-center mt-8 md:mt-0 md:max-w-md xl:max-w-lg md:text-left'>

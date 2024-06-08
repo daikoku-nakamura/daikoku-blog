@@ -22,7 +22,7 @@ export default function MobileNav() {
     <>
       <button
         type='button'
-        aria-label='モバイルメニュ―'
+        aria-label='メニュ―を開く'
         className='lg:hidden'
         onClick={onToggleNav}
       >
@@ -34,7 +34,12 @@ export default function MobileNav() {
         }`}
       >
         <div className='flex justify-end'>
-          <button type='button' className='mr-8 mt-11' onClick={onToggleNav}>
+          <button
+            type='button'
+            className='mr-8 mt-11'
+            onClick={onToggleNav}
+            aria-label='メニューを閉じる'
+          >
             <AiOutlineClose className='h-8 w-8' />
           </button>
         </div>

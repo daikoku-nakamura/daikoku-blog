@@ -24,7 +24,7 @@ export default function Fotter() {
     <footer className='py-6'>
       <div className='container px-6 mx-auto space-y-6 border-t border-gray-300 md:space-y-12 divide-opacity-50'>
         <div className='grid justify-center pt-6 lg:justify-between'>
-          <div className='flex flex-col self-center text-sm text-center md:block lg:col-start-1 md:space-x-6'>
+          <div className='flex flex-col self-center text-md text-center md:block lg:col-start-1 md:space-x-6 space-y-2'>
             <span>©2024 DaikokuBlog All rights reserved</span>
             <Link href='/privacy' className='hover:underline'>
               プライバシーポリシー
@@ -41,6 +41,7 @@ export default function Fotter() {
                 rel='noopener noreferrer'
                 target='_blank'
                 className='flex items-center justify-center w-12 h-12 rounded-full text-gray-50 hover:bg-green-600 bg-green-500 hover:scale-110'
+                aria-label={`${link.title}へのリンク`}
               >
                 <span className='text-3xl'>{link.logo}</span>
               </a>

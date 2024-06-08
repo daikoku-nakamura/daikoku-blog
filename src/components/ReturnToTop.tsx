@@ -38,6 +38,7 @@ export default function ReturnToTop() {
         className={`bg-green-500 hover:bg-green-600 hover:scale-110 text-white rounded-full p-4 ${
           isVisible ? 'opacity-100' : 'opacity-0'
         }`}
+        aria-label='トップに戻る'
       >
         <HiOutlineArrowSmUp className='h-10 w-10' />
       </button>

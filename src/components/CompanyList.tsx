@@ -6,7 +6,7 @@ export default function CompanyList() {
     <Container>
       {companyData.map(company => (
         <div key={company.department.id}>
-          <h3 className='my-5 border-l-8 border-green-600 p-3 text-3xl'>
+          <h3 className='my-5 border-l-8 border-blue-600 p-3 text-3xl'>
             {company.department.name}
           </h3>
           <div className='relative overflow-x-auto'>
@@ -20,7 +20,7 @@ export default function CompanyList() {
               </thead>
               {company.department.items.map(item => (
                 <tbody key={item.id}>
-                  <tr className='border-b hover:bg-white text-gray-500'>
+                  <tr className='border-b hover:bg-white text-gray-600'>
                     <td className='px-1 py-4 md:px-6'>{item.name}</td>
                     <td className='px-1 py-4 md:px-6'>{item.address}</td>
                     <td className='px-1 py-4 md:px-6'>{item.tel}</td>

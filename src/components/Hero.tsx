@@ -18,7 +18,7 @@ export default function Hero() {
         <h1 className='text-5xl md:text-4xl leading-none lg:text-6xl'>
           大黒工業の
           <br />
-          <span className='text-green-600'>営業マンによる</span>
+          <span className='text-blue-600'>営業マンによる</span>
           <br />
           商品情報ブログ
         </h1>

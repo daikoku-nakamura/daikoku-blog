@@ -15,7 +15,7 @@ export default function NotFound() {
       <Container>
         <div className='flex flex-col items-center justify-center'>
           <div className='max-w-md text-center'>
-            <h2 className='mb-8 font-extrabold text-9xl text-green-500'>
+            <h2 className='mb-8 font-extrabold text-9xl text-blue-600'>
               <span className='sr-only'>Error</span>404
             </h2>
             <p className='text-2xl md:text-3xl'>指定されたページが見つかりません。</p>

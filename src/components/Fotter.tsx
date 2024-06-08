@@ -40,7 +40,7 @@ export default function Fotter() {
                 href={link.href}
                 rel='noopener noreferrer'
                 target='_blank'
-                className='flex items-center justify-center w-12 h-12 rounded-full text-gray-50 hover:bg-green-600 bg-green-500 hover:scale-110'
+                className='flex items-center justify-center w-12 h-12 rounded-full text-white hover:bg-indigo-600 bg-blue-600 hover:scale-110'
                 aria-label={`${link.title}へのリンク`}
               >
                 <span className='text-3xl'>{link.logo}</span>

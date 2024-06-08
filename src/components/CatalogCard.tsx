@@ -36,7 +36,7 @@ export default function CatalogCard({ items }: Props) {
             >
               {item.name}
             </a>
-            <p className='mt-4 text-base text-gray-500'>{item.description}</p>
+            <p className='mt-4 text-base text-gray-600'>{item.description}</p>
           </div>
         </div>
       ))}

@@ -11,12 +11,12 @@ const config: Config = {
           css: {
             maxWidth: false,
             h2: {
-              background: theme('colors.green.600'),
+              background: theme('colors.blue.600'),
               padding: theme('spacing.4'),
               color: theme('colors.white'),
             },
             h3: {
-              borderLeft: "8px solid theme('colors.green.600')",
+              borderLeft: "8px solid theme('colors.blue.600')",
               padding: theme('spacing.4'),
             },
             p: {

@@ -29,16 +29,16 @@ export default function BlogCard({ blogs }: Props) {
                 />
               </Link>
               <div className='p-4'>
-                <p className='mb-2 text-sm text-green-600'>
+                <p className='mb-2 text-sm text-blue-600'>
                   投稿日：
                   <FormatDate date={blog.publishedAt} />
                 </p>
-                <p className='mt-2 text-gray-500'>{blog.description}</p>
+                <p className='mt-2 text-gray-600'>{blog.description}</p>
                 <div className='mt-4 flex gap-2'>
                   {blog.categories.map(category => (
                     <span
                       key={category.id}
-                      className='inline-flex items-center gap-1 rounded-full bg-green-100 px-2 py-1 text-sm text-green-600'
+                      className='inline-flex items-center gap-1 bg-blue-50 border border-blue-600 rounded-full px-2 py-1 text-sm text-blue-600'
                     >
                       {category.name}
                     </span>

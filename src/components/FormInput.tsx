@@ -32,7 +32,7 @@ export default function FormInput({
           {...register(id, { required: `${label}は入力必須です` })}
           aria-describedby={`error-${id}-required`}
           rows={rows}
-          className='h-64 w-full rounded border px-3 py-2 outline-none ring-green-300 transition duration-100 focus:ring'
+          className='h-64 w-full rounded border px-3 py-2 outline-none ring-blue-300 transition duration-100 focus:ring'
         />
       ) : (
         <input
@@ -40,7 +40,7 @@ export default function FormInput({
           id={id}
           {...register(id, { required: `${label}は入力必須です` })}
           aria-describedby={`error-${id}-required`}
-          className='w-full rounded border px-3 py-2 outline-none ring-green-300 transition duration-100 focus:ring'
+          className='w-full rounded border px-3 py-2 outline-none ring-blue-300 transition duration-100 focus:ring'
         />
       )}
       {errors[id] && (

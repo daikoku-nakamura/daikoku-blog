@@ -35,7 +35,7 @@ export default function ReturnToTop() {
       <button
         type='button'
         onClick={scrollToTop}
-        className={`bg-green-500 hover:bg-green-600 hover:scale-110 text-white rounded-full p-4 ${
+        className={`bg-blue-600 hover:bg-indigo-600 hover:scale-110 text-white rounded-full p-4 ${
           isVisible ? 'opacity-100' : 'opacity-0'
         }`}
         aria-label='トップに戻る'
